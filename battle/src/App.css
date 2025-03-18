@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+body, .root{
+  width: 100vw;
+  height: 100vh;
+  overflow:hidden;
+}
+
+main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(imgs/back.svg);
+  background-size: cover;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  font-family: "Ponomar", system-ui;
+  font-size: 10px;
+}
+
+header{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1{
+  font-size: 5rem;
+  color: #f1e49d;
+  -webkit-text-stroke: 0.1px #e6d260;
+  font-weight: 900;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  text-shadow: 10px 10px 15px black;
+}
+header span{
+  margin-top: -40px;
+}
+
+.main_field{
+  display: flex;
+  width: 80%;
+  height: 70%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block-field{
+  display: flex;
+  width: 90%;
+  height: 100%;
+  flex-flow: row wrap;
+  gap: 13%;
+  margin-left: 12%;
+}
+
+.block{
+  width: 42%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+}
+
+.field{
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: rgba(240, 248, 255, 0);
+  transition: transform 1s ease;
+}
+
+.field:hover{
+  z-index: 11;
+}
+
+.block-field p{
+  height: 8%;
+  font-size: 2rem;
+  font-family: "Ponomar", system-ui;
+  color: #f6e2bb19;
+  -webkit-text-stroke: 0.01px #cdcd69;
+  font-weight: 900;
+}
+
+.block-field button{
+  width: 100px;
+  height: 50px;
+  color: #cdcd69;
+  font-family: "Ponomar", system-ui;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  background-color: rgba(37, 37, 37, 0.479);
+  border: 0.1px solid #cdcd69;;
+  margin-top: 5%;
+}
+
+.block-field button:hover{
+  color: rgb(0, 0, 0);
+  border: 0.1px solid rgb(0, 0, 0);
+  background-color:  #f1e49da7;
+}
+
+.cell{
+  width: 10%;
+  height: 10%;
+  border: 0.1px solid #f1e49da7;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  color: #cdcd69;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.cell:hover{
+  background-color: rgba(0, 0, 0, 0.185);
+  z-index: 11;
+}
+
+.cell span{
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+}
+.buttons{
+  width: 80%;
+  height: 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  z-index: 2;
+}
+@keyframes appear{
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.phrase{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  animation: appear 5s ease-in-out;
+  z-index: 100;
+}
+.phrase p{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  color: #cdcd69;
+  font-size: 20px;
+  justify-self: start;
+  font-family:'Times New Roman', Times, serif;
+  z-index: 100;
+}
+
+.phrase img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#human-phrase{
+  margin: 0 0 0px -10%;
+}
+
+#comp-phrase{
+  margin: 0 0 0px 60%;
+}
+@keyframes appearEnd{
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+
+.end{
+  position: absolute;
+  width: 50%;
+  height: 30%;
+  background-color: #493123;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  text-align: center;
+  border: 3px solid #cdcd69;
+  margin: 0 0 0px 7%;
+  animation: appearEnd 2s ease-in-out;
+  z-index: 20;
+}
+
+
+.end p{
+  width: 90%;
+  height: 60%;
+  color: #f1e49d;
+  padding: 10px;
+  font-size: 4em;
+}
+
+.end span{
+  font-size: 1em;
+  color: #a7994b;
+  -webkit-text-stroke: 0.1px #d4cfb3cd;
+}
+
+.end button{
+  width: 30%;
+  height: 20%;
+  font-size: 2em;
+}
+
+#rools{
+  height: 40%;
+  gap: 10px;
+}
+
+#hurem-img{
+  position: absolute;
+  width: 20%;
+  margin: 30% 80% 0 0;
+  z-index: 10;
+}
+
+#pasha-img{
+  position: absolute;
+  width: 25%;
+  margin: 31% 0% 0 75%;
+  z-index: 10;
+}
+
+#sultan-img{
+  position: absolute;
+  width: 30%;
+  margin: 15% 0 0 0 ;
+  z-index: 1;
+}
+
+.back-dialog{
+  position: absolute;
+  width: 1000%;
+  height: 1000%;
+  background-color: rgba(0, 0, 0, 0.685);
+  margin: -20% 0% 0% -20%;
+  z-index: 9;
+  animation: appear 5s ease-in-out;
+}
+
+#music{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  font-size: 40px;
+  background: none;
+  margin: -5% 0 0 90%;
+}
